@@ -1,4 +1,5 @@
-from flask import Flask
+from flask import Flask, render_template
+from flask import Response
 
 app = Flask(__name__)
 
@@ -20,7 +21,8 @@ def indexx():
 def indexxx():
     item1 = f'<div style="color:black">We have 120 tenants</div>'
     item2 = f'<a href="/">go back</a>'
-    return item1 + item2
+    # return item1 + item2
+    return Response(render_template("iman.html"))
 
 @app.route("/malipo")
 def indexxxx():
